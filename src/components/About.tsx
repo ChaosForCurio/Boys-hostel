@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { Shield, Users, Trophy, Clock } from "lucide-react";
 
 function Counter({ target, suffix = "", prefix = "" }: { target: number; suffix?: string; prefix?: string }) {
@@ -37,7 +37,7 @@ const STATS = [
   { icon: Clock,  label: "Support",           value: 24,  suffix: "/7" },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden:  { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1,

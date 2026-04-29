@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, useInView, AnimatePresence, Variants } from "framer-motion";
 import Image from "next/image";
 import { Check, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -41,7 +41,7 @@ const ROOMS = [
   },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden:  { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1, y: 0,
